@@ -6,7 +6,7 @@ export default function Movies(props) {
     <ul>
       {Object.keys(movies).map((movie) => (
         <li key={movies[movie].EventCode}>
-          <Movie EventTitle={movies[movie].EventTitle} />
+          <Movie movie={movies[movie]} />
         </li>
       ))}
     </ul>

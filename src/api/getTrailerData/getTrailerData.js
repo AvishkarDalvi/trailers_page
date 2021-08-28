@@ -5,6 +5,7 @@ export const getTrailerData = (setMovies) => {
     .then((response) => response.json())
     .then((responseData) => {
       console.log(responseData);
+      console.log(responseData.moviesData['ET00093903'].EventImageUrl);
       setMovies(responseData.moviesData);
     });
 };
