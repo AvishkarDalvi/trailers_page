@@ -19,10 +19,10 @@ export default function Trailer(props) {
       </div>
       <div className={classes["trailer-info"]}>
         <div className={classes["trailer-inner"]}>
-          <div>{movie.EventTitle}</div>
-          <div>{movie.EventLanguage}</div>
-          <div>{movie.EventGenre}</div>
-          <div>{movie.ShowDate}</div>
+          <div className={classes["trailer-title"]}>{movie.EventTitle}</div>
+          <div className={classes["trailer-common"]}>{movie.EventLanguage}</div>
+          <div className={classes["trailer-common"]}>{movie.EventGenre}</div>
+          <div className={classes["trailer-common"]}>{movie.ShowDate}</div>
         </div>
       </div>
     </div>
