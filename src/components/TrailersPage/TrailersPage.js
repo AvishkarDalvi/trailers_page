@@ -3,9 +3,11 @@ import { useEffect, useState } from "react";
 import Movies from "./Movies/Movies";
 import classes from "./TrailersPage.module.css";
 import Header from "./Header/Header";
+import Filters from "./Filters/Filters";
 
 export default function TrailersPage() {
   const [languages, setLanguages] = useState([]);
+  const [filters, setFilters] = useState([]);
   const [movies, setMovies] = useState(null);
   const [currentMovie, setCurrentMovie] = useState(null);
 
@@ -14,13 +16,19 @@ export default function TrailersPage() {
   }, []);
 
   const clickHandler = (eventCode) => {
-    console.log("clickHandler", eventCode);
     setCurrentMovie(eventCode);
+  };
+
+  const addFilter = (filter) => {
+    const currentFilters = [...filters];
+    currentFilters.push(filter);
+    setFilters(currentFilters);
   };
 
   return (
     <div className={classes["list-wrapper"]}>
       <Header languages={languages} />
+      <Filters addFilter={addFilter} filters={filters} />
       <section className={classes["movies-grid"]}>
         {movies && (
           <Movies
