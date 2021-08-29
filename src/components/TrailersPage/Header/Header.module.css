@@ -1,0 +1,19 @@
+.header-sec {
+  display: flex;
+  justify-content: space-between;
+  background-color: #000;
+  color: white;
+  padding: 20px;
+}
+.inner-flex {
+  display: flex;
+  gap: 20px;
+}
+
+select {
+  background: transparent;
+  border: 1px solid green;
+  border-radius: 2px;
+  color: green;
+  padding: 5px 15px 5px 10px;
+}

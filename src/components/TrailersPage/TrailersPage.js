@@ -2,14 +2,15 @@ import { getTrailerData } from "../../api/getTrailerData/getTrailerData";
 import { useEffect, useState } from "react";
 import Movies from "./Movies/Movies";
 import classes from "./TrailersPage.module.css";
+import Header from "./Header/Header";
 
 export default function TrailersPage() {
-  const [language, setLanguage] = useState("English");
+  const [languages, setLanguages] = useState([]);
   const [movies, setMovies] = useState(null);
   const [currentMovie, setCurrentMovie] = useState(null);
 
   useEffect(() => {
-    getTrailerData(setMovies);
+    getTrailerData(setMovies, setLanguages);
   }, []);
 
   const clickHandler = (eventCode) => {
@@ -19,7 +20,7 @@ export default function TrailersPage() {
 
   return (
     <div className={classes["list-wrapper"]}>
-      <header></header>
+      <Header languages={languages} />
       <section className={classes["movies-grid"]}>
         {movies && (
           <Movies
