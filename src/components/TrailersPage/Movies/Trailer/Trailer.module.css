@@ -1,0 +1,18 @@
+.trailer-sec {
+  visibility: hidden;
+  display: block;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  margin-top: 20px;
+  width: 100%;
+  background: #fff;
+  height: calc(700px - 300px - 20px);
+  transition: 0.3s all ease;
+  /* Calc =Full height - thumbnail size - margin/gap */
+}
+
+.trailer-frame {
+  width: 60%;
+}
