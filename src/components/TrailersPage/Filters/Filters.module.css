@@ -16,3 +16,7 @@
 .filter-item img {
   margin: 0 2px;
 }
+
+.filter-item img:hover {
+  cursor: pointer;
+}
