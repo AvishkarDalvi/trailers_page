@@ -22,7 +22,7 @@ li {
 }
 
 .show-trailer div + div {
-  visibility: visible;
-  opacity: 1;
-  z-index: 1;
+  display: block;
+  height: calc(700px - 300px - 20px);
+  /* Calc =Full height - thumbnail size - margin/gap */
 }
