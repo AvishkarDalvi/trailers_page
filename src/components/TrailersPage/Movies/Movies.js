@@ -1,5 +1,6 @@
 import Movie from "./Movie/Movie";
 import classes from "./Movies.module.css";
+import Trailer from "./Trailer/Trailer";
 export default function Movies(props) {
   const movies = props.movies;
   return (
@@ -16,6 +17,7 @@ export default function Movies(props) {
             onClick={() => props.clickHandler(movies[movie].EventCode)}
           >
             <Movie movie={movies[movie]} />
+            <Trailer movie={movies[movie]} showsTrailer={showsTrailer} />
           </li>
         );
       })}
