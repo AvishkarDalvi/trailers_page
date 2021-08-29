@@ -1,10 +1,11 @@
 import classes from "./Trailer.module.css";
+import moviesClasses from "../Movies.module.css";
 
 export default function Trailer(props) {
   const movie = props.movie;
   const url = movie.TrailerURL.replace("watch?v=", "embed/", movie.TrailerURL);
   return (
-    <div className={classes["trailer-sec"]}>
+    <div className={moviesClasses["trailer-sec"]}>
       <div className={classes["trailer-frame"]}>
         {props.showsTrailer && (
           <iframe
@@ -16,8 +17,11 @@ export default function Trailer(props) {
           ></iframe>
         )}
       </div>
-      <div>
-        <span>{movie.EventTitle}</span>
+      <div className={classes["trailer-info"]}>
+        <div>{movie.EventTitle}</div>
+        <div>{movie.EventLanguage}</div>
+        <div>{movie.EventGenre}</div>
+        <div>{movie.ShowDate}</div>
       </div>
     </div>
   );

@@ -21,7 +21,18 @@ li {
   height: 700px;
 }
 
-.show-trailer div + div {
+.trailer-sec {
+  display: none;
+  position: absolute;
+  left: 0;
+  margin-top: 20px;
+  width: 100%;
+  background: #444;
+  height: 0;
+  transition: 0.3s all ease;
+}
+
+.show-trailer .trailer-sec {
   display: block;
   height: calc(700px - 300px - 20px);
   /* Calc =Full height - thumbnail size - margin/gap */

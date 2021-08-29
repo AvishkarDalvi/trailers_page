@@ -1,16 +1,12 @@
-.trailer-sec {
-  display: none;
-  position: absolute;
-  left: 0;
-  margin-top: 20px;
-  width: 100%;
-  background: #444;
-  height: 0;
-  transition: 0.3s all ease;
-}
-
 .trailer-frame {
   width: 60%;
   height: 100%;
   padding: 20px;
+  float: left;
+}
+
+.trailer-info {
+  width: 40%;
+  color: white;
+  float: right;
 }
