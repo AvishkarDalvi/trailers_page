@@ -25,14 +25,21 @@ export default function TrailersPage() {
     setFilters(currentFilters);
   };
 
+  const removeFilter = (filter) => {
+    let currentFilters = [...filters];
+    currentFilters = currentFilters.filter((item) => item !== filter);
+    setFilters(currentFilters);
+  };
+
   return (
     <div className={classes["list-wrapper"]}>
       <Header addFilter={addFilter} languages={languages} />
-      <Filters filters={filters} />
+      <Filters removeFilter={removeFilter} filters={filters} />
       <section className={classes["movies-grid"]}>
         {movies && (
           <Movies
             movies={movies}
+            filters={filters}
             currentMovie={currentMovie}
             clickHandler={clickHandler}
           />
