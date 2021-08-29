@@ -27,8 +27,8 @@ export default function TrailersPage() {
 
   return (
     <div className={classes["list-wrapper"]}>
-      <Header languages={languages} />
-      <Filters addFilter={addFilter} filters={filters} />
+      <Header addFilter={addFilter} languages={languages} />
+      <Filters filters={filters} />
       <section className={classes["movies-grid"]}>
         {movies && (
           <Movies

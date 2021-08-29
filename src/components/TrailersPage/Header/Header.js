@@ -2,11 +2,18 @@ import classes from "./Header.module.css";
 
 export default function Header(props) {
   const languages = [
-    <option hidden value="">
+    <option key="hidden" hidden value="">
       select language
     </option>,
-    props.languages.map((item) => <option value={item}>{item}</option>)
+    props.languages.map((item) => (
+      <option key={item} value={item}>
+        {item}
+      </option>
+    ))
   ];
+  const addFilter = (event) => {
+    props.addFilter(event.target.value);
+  };
   return (
     <div className={classes["header-sec"]}>
       <div className={classes["inner-flex"]}>
@@ -20,7 +27,7 @@ export default function Header(props) {
             select popular
           </option>
         </select>
-        <select>{languages}</select>
+        <select onChange={addFilter}>{languages}</select>
         <select>
           <option hidden value="genre">
             select genre
