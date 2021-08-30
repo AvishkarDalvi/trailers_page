@@ -4,15 +4,17 @@ import Movies from "./Movies/Movies";
 import classes from "./TrailersPage.module.css";
 import Header from "./Header/Header";
 import Filters from "./Filters/Filters";
+import Error from "./Error/Error";
 
 export default function TrailersPage() {
   const [languages, setLanguages] = useState([]);
   const [filters, setFilters] = useState([]);
   const [movies, setMovies] = useState(null);
   const [currentMovie, setCurrentMovie] = useState(null);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
-    getTrailerData(setMovies, setLanguages);
+    getTrailerData(setMovies, setLanguages, setError, error);
   }, []);
 
   const clickHandler = (eventCode) => {
@@ -45,6 +47,7 @@ export default function TrailersPage() {
           />
         )}
       </section>
+      {error && <Error />}
     </div>
   );
 }
