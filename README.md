@@ -1,6 +1,5 @@
 # Movies and Trailers
 
-Created with CodeSandbox
 A react.js application that displays the movies and shows you the details and the trailer of the movie when you click on a particular movie and also lets you filter the movies you see based on the multiple languages you select from the dropdown.
 
 ---
