@@ -11,6 +11,8 @@ export default function Header(props) {
       </option>
     ))
   ];
+
+  //function adds the selected language to the filter array
   const addFilter = (event) => {
     props.addFilter(event.target.value);
   };

@@ -3,6 +3,8 @@ import classes from "./Movies.module.css";
 import Trailer from "./Trailer/Trailer";
 export default function Movies(props) {
   const movies = props.movies;
+
+  //function decides whether a particular movie to be shown or not based on the language filter
   const shouldShow = (language) => {
     if (props.filters.length === 0) {
       return true;

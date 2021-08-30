@@ -3,6 +3,8 @@ import moviesClasses from "../Movies.module.css";
 
 export default function Trailer(props) {
   const movie = props.movie;
+
+  //replacing watch with embed inside the youtube video link as the link from the API was not working
   const url = movie.TrailerURL.replace("watch?v=", "embed/", movie.TrailerURL);
   return (
     <div className={moviesClasses["trailer-sec"]}>
