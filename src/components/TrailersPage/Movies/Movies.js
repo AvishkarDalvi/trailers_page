@@ -23,9 +23,8 @@ export default function Movies(props) {
             <li
               className={showsTrailer ? classes["show-trailer"] : null}
               key={movies[movie].EventCode}
-              onClick={() => props.clickHandler(movies[movie].EventCode)}
             >
-              <Movie movie={movies[movie]} />
+              <Movie clickHandler={props.clickHandler} movie={movies[movie]} />
               <Trailer movie={movies[movie]} showsTrailer={showsTrailer} />
             </li>
           );

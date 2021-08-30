@@ -7,6 +7,7 @@ export default function Filters(props) {
   }
   const removeFilter = (item) => {
     console.log(item);
+    props.removeFilter(item);
   };
   const renderFilter = props.filters.map((item) => (
     <div className={classes["filter-item"]} key={item}>

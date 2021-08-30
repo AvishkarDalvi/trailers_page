@@ -1,6 +1,7 @@
 .filter-sec {
   display: flex;
   justify-content: start;
+  flex-wrap: wrap;
   gap: 20px;
   padding: 10px;
 }
